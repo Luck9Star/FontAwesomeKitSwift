@@ -16,6 +16,10 @@
 		AACA955A1B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA95591B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift */; };
 		AACA95661B391C7800EB4990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA95651B391C7800EB4990 /* Icon.swift */; };
 		AAEDDAA01B39AC1E0043DF0B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDDA9F1B39AC1E0043DF0B /* CoreText.framework */; };
+		AAEDDAA11B39AE380043DF0B /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = AABFFD001B39624000562F2B /* FontAwesome.otf */; };
+		AAEDDAA21B39AE3E0043DF0B /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AABFFD011B39624000562F2B /* foundation-icons.ttf */; };
+		AAEDDAA31B39AE400043DF0B /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AABFFD021B39624000562F2B /* ionicons.ttf */; };
+		AAEDDAA41B39AE430043DF0B /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AABFFD031B39624000562F2B /* zocial-regular-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEDDAA11B39AE380043DF0B /* FontAwesome.otf in Resources */,
+				AAEDDAA21B39AE3E0043DF0B /* foundation-icons.ttf in Resources */,
+				AAEDDAA31B39AE400043DF0B /* ionicons.ttf in Resources */,
+				AAEDDAA41B39AE430043DF0B /* zocial-regular-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
