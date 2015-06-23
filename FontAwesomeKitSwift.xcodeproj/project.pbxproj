@@ -12,7 +12,7 @@
 		AABFFCFF1B39559000562F2B /* Zocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFFCFE1B39559000562F2B /* Zocial.swift */; };
 		AABFFD051B3965FD00562F2B /* FoundationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFFD041B3965FD00562F2B /* FoundationIcons.swift */; };
 		AACA954E1B391C4200EB4990 /* FontAwesomeKitSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA954D1B391C4200EB4990 /* FontAwesomeKitSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AACA95551B391C4300EB4990 /* FontAwesomeKitSwift iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift iOS.framework */; };
+		AACA95551B391C4300EB4990 /* FontAwesomeKitSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift.framework */; };
 		AACA955A1B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA95591B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift */; };
 		AACA95661B391C7800EB4990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA95651B391C7800EB4990 /* Icon.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 		AABFFD021B39624000562F2B /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		AABFFD031B39624000562F2B /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		AABFFD041B3965FD00562F2B /* FoundationIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationIcons.swift; sourceTree = "<group>"; };
-		AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "FontAwesomeKitSwift iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesomeKitSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACA954D1B391C4200EB4990 /* FontAwesomeKitSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontAwesomeKitSwift.h; sourceTree = "<group>"; };
 		AACA954F1B391C4200EB4990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACA95541B391C4300EB4990 /* FontAwesomeKitSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontAwesomeKitSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AACA95551B391C4300EB4990 /* FontAwesomeKitSwift iOS.framework in Frameworks */,
+				AACA95551B391C4300EB4990 /* FontAwesomeKitSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		AACA954B1B391C4200EB4990 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift iOS.framework */,
+				AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift.framework */,
 				AACA95541B391C4300EB4990 /* FontAwesomeKitSwiftTests.xctest */,
 			);
 			name = Products;
@@ -131,9 +131,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AACA95491B391C4200EB4990 /* FontAwesomeKitSwift iOS */ = {
+		AACA95491B391C4200EB4990 /* FontAwesomeKitSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AACA955E1B391C4300EB4990 /* Build configuration list for PBXNativeTarget "FontAwesomeKitSwift iOS" */;
+			buildConfigurationList = AACA955E1B391C4300EB4990 /* Build configuration list for PBXNativeTarget "FontAwesomeKitSwift" */;
 			buildPhases = (
 				AACA95451B391C4200EB4990 /* Sources */,
 				AACA95461B391C4200EB4990 /* Frameworks */,
@@ -144,9 +144,9 @@
 			);
 			dependencies = (
 			);
-			name = "FontAwesomeKitSwift iOS";
+			name = FontAwesomeKitSwift;
 			productName = FontAwesomeKitSwift;
-			productReference = AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift iOS.framework */;
+			productReference = AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AACA95531B391C4300EB4990 /* FontAwesomeKitSwiftTests */ = {
@@ -196,7 +196,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AACA95491B391C4200EB4990 /* FontAwesomeKitSwift iOS */,
+				AACA95491B391C4200EB4990 /* FontAwesomeKitSwift */,
 				AACA95531B391C4300EB4990 /* FontAwesomeKitSwiftTests */,
 			);
 		};
@@ -245,7 +245,7 @@
 /* Begin PBXTargetDependency section */
 		AACA95571B391C4300EB4990 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AACA95491B391C4200EB4990 /* FontAwesomeKitSwift iOS */;
+			target = AACA95491B391C4200EB4990 /* FontAwesomeKitSwift */;
 			targetProxy = AACA95561B391C4300EB4990 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -349,6 +349,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FontAwesomeKitSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.yang.FontAwesomeKitSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +366,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FontAwesomeKitSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.yang.FontAwesomeKitSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -404,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AACA955E1B391C4300EB4990 /* Build configuration list for PBXNativeTarget "FontAwesomeKitSwift iOS" */ = {
+		AACA955E1B391C4300EB4990 /* Build configuration list for PBXNativeTarget "FontAwesomeKitSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AACA955F1B391C4300EB4990 /* Debug */,

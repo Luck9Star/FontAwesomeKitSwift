@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AACA95491B391C4200EB4990"
-               BuildableName = "FontAwesomeKitSwift iOS.framework"
-               BlueprintName = "FontAwesomeKitSwift iOS"
+               BuildableName = "FontAwesomeKitSwift.framework"
+               BlueprintName = "FontAwesomeKitSwift"
                ReferencedContainer = "container:FontAwesomeKitSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AACA95491B391C4200EB4990"
-            BuildableName = "FontAwesomeKitSwift iOS.framework"
-            BlueprintName = "FontAwesomeKitSwift iOS"
+            BuildableName = "FontAwesomeKitSwift.framework"
+            BlueprintName = "FontAwesomeKitSwift"
             ReferencedContainer = "container:FontAwesomeKitSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AACA95491B391C4200EB4990"
-            BuildableName = "FontAwesomeKitSwift iOS.framework"
-            BlueprintName = "FontAwesomeKitSwift iOS"
+            BuildableName = "FontAwesomeKitSwift.framework"
+            BlueprintName = "FontAwesomeKitSwift"
             ReferencedContainer = "container:FontAwesomeKitSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AACA95491B391C4200EB4990"
-            BuildableName = "FontAwesomeKitSwift iOS.framework"
-            BlueprintName = "FontAwesomeKitSwift iOS"
+            BuildableName = "FontAwesomeKitSwift.framework"
+            BlueprintName = "FontAwesomeKitSwift"
             ReferencedContainer = "container:FontAwesomeKitSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
