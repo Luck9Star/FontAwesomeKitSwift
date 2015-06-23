@@ -7,12 +7,15 @@
 //
 
 import UIKit
-
+import FontAwesomeKitSwift
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let image = Icon.icons(FoundationIcons.Trees,Zocial.Amazon)(size: 100)(color: nil).imageWithSize(CGSize(width: 240, height: 120))
+        imageView.image = image;
     }
 
     override func didReceiveMemoryWarning() {
