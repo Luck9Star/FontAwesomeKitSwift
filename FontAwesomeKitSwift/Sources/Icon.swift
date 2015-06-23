@@ -164,7 +164,7 @@ extension Zocial: IconProtocol{
         dispatch_once(&Static.onceToken, {
             registerFont("zocial-regular-webfont", withExtension: "ttf")
         })
-        let font = UIFont(name: "zocial-regular-webfont", size: size)
+        let font = UIFont(name: "Zocial", size: size)
         assertNotNil(obj: font)
         
         return font!
@@ -181,7 +181,7 @@ extension FoundationIcons: IconProtocol{
         dispatch_once(&Static.onceToken, {
             registerFont("foundation-icons", withExtension: "ttf")
         })
-        let font = UIFont(name: "foundation-icons", size: size)
+        let font = UIFont(name: "fontcustom", size: size)
         assertNotNil(obj: font)
         
         return font!
@@ -198,7 +198,7 @@ extension IonIcons: IconProtocol{
         dispatch_once(&Static.onceToken, {
             registerFont("ionicons", withExtension: "ttf")
         })
-        let font = UIFont(name: "IonIcons", size: size)
+        let font = UIFont(name: "Ionicons", size: size)
         assertNotNil(obj: font)
         
         return font!
