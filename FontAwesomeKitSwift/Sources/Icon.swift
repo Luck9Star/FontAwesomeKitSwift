@@ -17,10 +17,15 @@ public class Icon{
         self.mutableAttributedString = mutableAttributedString;
     }
     
-    public class func icons(icons: IconProtocol ...)(size: CGFloat) ->Icon{
+    public class func icons(icons: IconProtocol ...)(size: CGFloat)(color: UIColor?) ->Icon{
         let mutableAttributedString = NSMutableAttributedString()
         for icon in icons {
-            mutableAttributedString.appendAttributedString(NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size)]))
+            var attributes = [String: AnyObject]()
+            attributes[NSFontAttributeName] = icon.iconFontWithSize(size)
+            if let c = color {
+                attributes[NSForegroundColorAttributeName] = c
+            }
+            mutableAttributedString.appendAttributedString(NSAttributedString(string: icon.iconName, attributes: attributes))
         }
         return Icon(mutableAttributedString: mutableAttributedString)
     }
@@ -102,27 +107,6 @@ public class Icon{
         return iconImage;
     }
 }
-
-//public extension UIImage {
-//    public func imageWithStackedIcons<T>(icons: [Icon<T>], imageSize: CGSize) ->UIImage{
-//        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0);
-//        
-//        // ---------- begin context ----------
-//        let context = UIGraphicsGetCurrentContext();
-//        
-//        for icon in icons {
-//            icon.fillBackgroundForContext(context, backgroundSize: imageSize)
-//            icon.mutableAttributedString.drawInRect(icon.drawingRectWithImageSize(imageSize))
-//        }
-//        
-//        let iconImage = UIGraphicsGetImageFromCurrentImageContext();
-//        
-//        // ---------- end context ----------
-//        UIGraphicsEndImageContext();
-//        
-//        return iconImage;
-//    }
-//}
 public protocol IconProtocol{
     func iconFontWithSize(size: CGFloat)->UIFont
     var iconName: String{
@@ -144,19 +128,26 @@ extension UIFont{
         }
     }
 }
+private func registerFont(resourceName: String, withExtension: String){
+    let bundle = NSBundle(forClass: Icon.self)
+    let url: NSURL = bundle.URLForResource(resourceName, withExtension: withExtension)!
+    UIFont.registerIconFont(URL: url)
+}
+private let assertNotNil:(obj: AnyObject?)->() = {
+    obj in
+    assert(obj == nil, "Font should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
+}
+
 extension FontAwesome: IconProtocol{
     public func iconFontWithSize(size: CGFloat)->UIFont{
         struct Static {
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            print("init")
-            let bundle = NSBundle(forClass: Icon.self)
-            let url: NSURL = bundle.URLForResource("FontAwesome", withExtension: "otf")!
-            UIFont.registerIconFont(URL: url)
+            registerFont("FontAwesome", withExtension: "otf")
         })
         let font = UIFont(name: "FontAwesome", size: size)
-        assert(font == nil, "UIFont object should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
+        assertNotNil(obj: font)
         
         return font!
     }
@@ -171,13 +162,10 @@ extension Zocial: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            print("init")
-            let bundle = NSBundle(forClass: Icon.self)
-            let url: NSURL = bundle.URLForResource("zocial-regular-webfont", withExtension: "ttf")!
-            UIFont.registerIconFont(URL: url)
+            registerFont("zocial-regular-webfont", withExtension: "ttf")
         })
-        let font = UIFont(name: "Zocial", size: size)
-        assert(font == nil, "UIFont object should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
+        let font = UIFont(name: "zocial-regular-webfont", size: size)
+        assertNotNil(obj: font)
         
         return font!
     }
@@ -191,13 +179,10 @@ extension FoundationIcons: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            print("init")
-            let bundle = NSBundle(forClass: Icon.self)
-            let url: NSURL = bundle.URLForResource("foundation-icons", withExtension: "ttf")!
-            UIFont.registerIconFont(URL: url)
+            registerFont("foundation-icons", withExtension: "ttf")
         })
-        let font = UIFont(name: "FoundationIcons", size: size)
-        assert(font == nil, "UIFont object should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
+        let font = UIFont(name: "foundation-icons", size: size)
+        assertNotNil(obj: font)
         
         return font!
     }
@@ -211,13 +196,10 @@ extension IonIcons: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            print("init")
-            let bundle = NSBundle(forClass: Icon.self)
-            let url: NSURL = bundle.URLForResource("ionicons", withExtension: "ttf")!
-            UIFont.registerIconFont(URL: url)
+            registerFont("ionicons", withExtension: "ttf")
         })
         let font = UIFont(name: "IonIcons", size: size)
-        assert(font == nil, "UIFont object should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
+        assertNotNil(obj: font)
         
         return font!
     }
