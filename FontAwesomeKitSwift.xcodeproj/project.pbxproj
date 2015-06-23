@@ -15,6 +15,7 @@
 		AACA95551B391C4300EB4990 /* FontAwesomeKitSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACA954A1B391C4200EB4990 /* FontAwesomeKitSwift.framework */; };
 		AACA955A1B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA95591B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift */; };
 		AACA95661B391C7800EB4990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA95651B391C7800EB4990 /* Icon.swift */; };
+		AAEDDAA01B39AC1E0043DF0B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDDA9F1B39AC1E0043DF0B /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		AACA95591B391C4300EB4990 /* FontAwesomeKitSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAwesomeKitSwiftTests.swift; sourceTree = "<group>"; };
 		AACA955B1B391C4300EB4990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACA95651B391C7800EB4990 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		AAEDDA9F1B39AC1E0043DF0B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEDDAA01B39AC1E0043DF0B /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		AACA95401B391C4200EB4990 = {
 			isa = PBXGroup;
 			children = (
+				AAEDDA9F1B39AC1E0043DF0B /* CoreText.framework */,
 				AACA954C1B391C4200EB4990 /* FontAwesomeKitSwift */,
 				AACA95581B391C4300EB4990 /* FontAwesomeKitSwiftTests */,
 				AACA954B1B391C4200EB4990 /* Products */,
@@ -136,8 +140,8 @@
 			buildConfigurationList = AACA955E1B391C4300EB4990 /* Build configuration list for PBXNativeTarget "FontAwesomeKitSwift" */;
 			buildPhases = (
 				AACA95451B391C4200EB4990 /* Sources */,
-				AACA95461B391C4200EB4990 /* Frameworks */,
 				AACA95471B391C4200EB4990 /* Headers */,
+				AACA95461B391C4200EB4990 /* Frameworks */,
 				AACA95481B391C4200EB4990 /* Resources */,
 			);
 			buildRules = (

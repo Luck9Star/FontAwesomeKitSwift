@@ -15,6 +15,8 @@
 		AAEDDA741B39A4B20043DF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDDA721B39A4B20043DF0B /* LaunchScreen.storyboard */; };
 		AAEDDA7F1B39A4B20043DF0B /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDDA7E1B39A4B20043DF0B /* ExampleTests.swift */; };
 		AAEDDA8A1B39A4B20043DF0B /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDDA891B39A4B20043DF0B /* ExampleUITests.swift */; };
+		AAEDDA9C1B39AB7C0043DF0B /* FontAwesomeKitSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDDA981B39AA2F0043DF0B /* FontAwesomeKitSwift.framework */; };
+		AAEDDA9E1B39ABA10043DF0B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDDA9D1B39ABA10043DF0B /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AAEDDA851B39A4B20043DF0B /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDDA891B39A4B20043DF0B /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		AAEDDA8B1B39A4B20043DF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAEDDA981B39AA2F0043DF0B /* FontAwesomeKitSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeKitSwift.framework; path = Carthage/Build/iOS/FontAwesomeKitSwift.framework; sourceTree = "<group>"; };
+		AAEDDA9D1B39ABA10043DF0B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEDDA9E1B39ABA10043DF0B /* CoreText.framework in Frameworks */,
+				AAEDDA9C1B39AB7C0043DF0B /* FontAwesomeKitSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,8 @@
 		AAEDDA5B1B39A4B20043DF0B = {
 			isa = PBXGroup;
 			children = (
+				AAEDDA9D1B39ABA10043DF0B /* CoreText.framework */,
+				AAEDDA981B39AA2F0043DF0B /* FontAwesomeKitSwift.framework */,
 				AAEDDA661B39A4B20043DF0B /* Example */,
 				AAEDDA7D1B39A4B20043DF0B /* ExampleTests */,
 				AAEDDA881B39A4B20043DF0B /* ExampleUITests */,
@@ -138,6 +146,7 @@
 				AAEDDA601B39A4B20043DF0B /* Sources */,
 				AAEDDA611B39A4B20043DF0B /* Frameworks */,
 				AAEDDA621B39A4B20043DF0B /* Resources */,
+				AAEDDA9B1B39AA410043DF0B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +262,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AAEDDA9B1B39AA410043DF0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesomeKitSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAEDDA601B39A4B20043DF0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -351,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -390,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
