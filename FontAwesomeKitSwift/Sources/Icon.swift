@@ -17,19 +17,24 @@ public class Icon{
         self.mutableAttributedString = mutableAttributedString;
     }
     
-    public class func icons(icons: IconProtocol ...)(size: CGFloat)(color: UIColor?) ->Icon{
-        let mutableAttributedString = NSMutableAttributedString()
+    public class func icons(icon: IconProtocol, _ icons: IconProtocol ...)(size: CGFloat)(color: UIColor?) ->Icon{
+        let mutableAttributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()]))
+        
         for icon in icons {
-            var attributes = [String: AnyObject]()
-            attributes[NSFontAttributeName] = icon.iconFontWithSize(size)
-            if let c = color {
-                attributes[NSForegroundColorAttributeName] = c
-            }
-            mutableAttributedString.appendAttributedString(NSAttributedString(string: icon.iconName, attributes: attributes))
+            mutableAttributedString.appendAttributedString(NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()]))
         }
         return Icon(mutableAttributedString: mutableAttributedString)
     }
-    var attributedString: NSAttributedString{
+    
+    public func append(icon: IconProtocol)(size: CGFloat)(color: UIColor?) {
+        let attributedString = NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()])
+        mutableAttributedString.appendAttributedString(attributedString)
+    }
+    public func append(icon: Icon){
+        mutableAttributedString.appendAttributedString(icon.attributedString)
+    }
+    
+    public var attributedString: NSAttributedString{
         return NSAttributedString(attributedString: mutableAttributedString)
     }
     var characterCode: String{
@@ -135,7 +140,7 @@ private func registerFont(resourceName: String, withExtension: String){
 }
 private let assertNotNil:(obj: AnyObject?)->() = {
     obj in
-    assert(obj == nil, "Font should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
+    assert(obj != nil, "Font should not be nil, check if the font file is added to the application bundle and you're using the correct font name.")
 }
 
 extension FontAwesome: IconProtocol{
