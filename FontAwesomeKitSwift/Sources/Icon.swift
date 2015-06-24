@@ -126,7 +126,7 @@ extension UIFont{
         let fontDataProvider = CGDataProviderCreateWithURL(URL)
         let newFont = CGFontCreateWithDataProvider(fontDataProvider)
         var error: Unmanaged<CFError>?
-        if !CTFontManagerRegisterGraphicsFont(newFont, &error) {
+        if !CTFontManagerRegisterGraphicsFont(newFont!, &error) {
             let errorDescription: CFStringRef = CFErrorCopyDescription(error!.takeUnretainedValue())
             let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
             NSException(name: NSInternalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
