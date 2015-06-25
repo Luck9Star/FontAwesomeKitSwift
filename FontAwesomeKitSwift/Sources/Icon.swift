@@ -17,6 +17,10 @@ public class Icon{
         self.mutableAttributedString = mutableAttributedString;
     }
     
+    convenience init(icon: IconProtocol, size: CGFloat, color: UIColor?){
+        self.init(mutableAttributedString: NSMutableAttributedString(attributedString: NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()])))
+    }
+    
     public class func icons(icon: IconProtocol, _ icons: IconProtocol ...)(size: CGFloat)(color: UIColor?) ->Icon{
         let mutableAttributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()]))
         

@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let image = Icon.icons(FontAwesome.Car,IonIcons.ModelS)(size: 100)(color: UIColor.redColor()).imageWithSize(CGSize(width: 250, height: 250))
+        let image = Icon.icons(FontAwesome.Star,IonIcons.StatsBars)(size: 100)(color: UIColor.redColor()).imageWithSize(CGSize(width: 250, height: 250))
         imageView.image = image;
     }
 
