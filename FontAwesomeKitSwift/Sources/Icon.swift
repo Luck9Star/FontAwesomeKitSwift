@@ -13,17 +13,16 @@ public class Icon{
     public var drawingBackgroundColor: UIColor? = nil
     public var drawingPositionAdjustment: UIOffset = UIOffsetZero
     
-    init(mutableAttributedString: NSMutableAttributedString){
+    public init(mutableAttributedString: NSMutableAttributedString){
         self.mutableAttributedString = mutableAttributedString;
     }
     
-    convenience init(icon: IconProtocol, size: CGFloat, color: UIColor?){
+    public convenience init(icon: IconProtocol, size: CGFloat, color: UIColor?){
         self.init(mutableAttributedString: NSMutableAttributedString(attributedString: NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()])))
     }
     
-    public class func icons(icon: IconProtocol, _ icons: IconProtocol ...)(size: CGFloat)(color: UIColor?) ->Icon{
-        let mutableAttributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()]))
-        
+    public class func icons(icons: IconProtocol ...)(size: CGFloat)(color: UIColor?) ->Icon{
+        let mutableAttributedString = NSMutableAttributedString()
         for icon in icons {
             mutableAttributedString.appendAttributedString(NSAttributedString(string: icon.iconName, attributes: [NSFontAttributeName: icon.iconFontWithSize(size), NSForegroundColorAttributeName: color ?? UIColor.blackColor()]))
         }
