@@ -58,19 +58,19 @@ public class Icon{
         }
         mutableAttributedString.setAttributes(attrs, range: rangeForMutableAttributedText)
     }
-    public func addAttribute(name name:String, value: AnyObject){
+    public func addAttribute(#name:String, value: AnyObject){
         mutableAttributedString.addAttribute(name, value: value, range: rangeForMutableAttributedText)
     }
     public func addAttributes(attrs: [String: AnyObject]){
         mutableAttributedString.addAttributes(attrs, range: rangeForMutableAttributedText)
     }
-    public func removeAttribute(name name: String){
+    public func removeAttribute(#name: String){
         mutableAttributedString.removeAttribute(name, range: rangeForMutableAttributedText)
     }
-    public var attributes: [String: AnyObject]{
+    public var attributes: [NSObject: AnyObject]{
         return mutableAttributedString.attributesAtIndex(0, effectiveRange: nil)
     }
-    public func attribute(attrName attrName: String) ->AnyObject?{
+    public func attribute(#attrName: String) ->AnyObject?{
         return mutableAttributedString.attribute(attrName, atIndex: 0, effectiveRange: nil)
     }
     var rangeForMutableAttributedText: NSRange{
@@ -122,7 +122,7 @@ public protocol IconProtocol{
     }
 }
 extension UIFont{
-    private class func registerIconFont(URL URL: NSURL){
+    private class func registerIconFont(#URL: NSURL){
         let path = URL.path
         assert(path != nil,"Wrong file path!")
         assert(NSFileManager.defaultManager().fileExistsAtPath(path!),"Font file doesn't exist at \(path!)")
@@ -152,7 +152,7 @@ extension FontAwesome: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            registerFont("FontAwesome", withExtension: "otf")
+            registerFont("FontAwesome", "otf")
         })
         let font = UIFont(name: "FontAwesome", size: size)
         assertNotNil(obj: font)
@@ -170,7 +170,7 @@ extension Zocial: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            registerFont("zocial-regular-webfont", withExtension: "ttf")
+            registerFont("zocial-regular-webfont", "ttf")
         })
         let font = UIFont(name: "Zocial", size: size)
         assertNotNil(obj: font)
@@ -187,7 +187,7 @@ extension FoundationIcons: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            registerFont("foundation-icons", withExtension: "ttf")
+            registerFont("foundation-icons", "ttf")
         })
         let font = UIFont(name: "fontcustom", size: size)
         assertNotNil(obj: font)
@@ -204,7 +204,7 @@ extension IonIcons: IconProtocol{
             static var onceToken : dispatch_once_t = 0
         }
         dispatch_once(&Static.onceToken, {
-            registerFont("ionicons", withExtension: "ttf")
+            registerFont("ionicons", "ttf")
         })
         let font = UIFont(name: "Ionicons", size: size)
         assertNotNil(obj: font)
