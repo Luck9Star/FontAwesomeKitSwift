@@ -104,10 +104,10 @@ public class Icon{
         }
         
         // ---------- begin context ----------
-        let context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext()!
         fillBackgroundForContext(context, backgroundSize: imageSize)
         mutableAttributedString.drawInRect(drawingRectWithImageSize(imageSize))
-        let iconImage = UIGraphicsGetImageFromCurrentImageContext();
+        let iconImage = UIGraphicsGetImageFromCurrentImageContext()
         
         // ---------- end context ----------
         UIGraphicsEndImageContext();
