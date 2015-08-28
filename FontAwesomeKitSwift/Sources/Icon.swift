@@ -160,7 +160,8 @@ extension FontAwesome: IconProtocol{
         return font!
     }
     public var iconName: String{
-        return self.rawValue.substringToIndex(advance(self.rawValue.startIndex, 1))
+//        self.rawValue.startIndex.advancedBy(1)
+        return self.rawValue.substringToIndex(self.rawValue.startIndex.advancedBy(1))
     }
 }
 
@@ -178,7 +179,7 @@ extension Zocial: IconProtocol{
         return font!
     }
     public var iconName: String{
-        return self.rawValue.substringToIndex(advance(self.rawValue.startIndex, 1))
+        return self.rawValue.substringToIndex(self.rawValue.startIndex.advancedBy(1))
     }
 }
 extension FoundationIcons: IconProtocol{
@@ -195,7 +196,7 @@ extension FoundationIcons: IconProtocol{
         return font!
     }
     public var iconName: String{
-        return self.rawValue.substringToIndex(advance(self.rawValue.startIndex, 1))
+        return self.rawValue.substringToIndex(self.rawValue.startIndex.advancedBy(1))
     }
 }
 extension IonIcons: IconProtocol{
@@ -212,6 +213,6 @@ extension IonIcons: IconProtocol{
         return font!
     }
     public var iconName: String{
-        return self.rawValue.substringToIndex(advance(self.rawValue.startIndex, 1))
+        return self.rawValue.substringToIndex(self.rawValue.startIndex.advancedBy(1))
     }
 }
